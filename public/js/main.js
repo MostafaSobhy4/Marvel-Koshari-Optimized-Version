@@ -4,7 +4,7 @@ function handleUserUI() {
     const user = document.querySelector(".user");
     if (!user) return;
 
-    user.style.display = "none";
+    user.style.display = "none";    
 
     const loggedInUser =
         sessionStorage.getItem("loggedInUser") ||
@@ -73,14 +73,13 @@ function initHomePage() {
         let ordDet = document.createElement("span");
         let orderAdd = document.querySelector(".orderAdd");
         let addButtonItem = document.querySelectorAll(".addItem");
-
+        
         if (sessionStorage.getItem("loggedInUser") || localStorage.getItem("loggedInUser")) {
 
             let go2shop = document.querySelector(".go2shop");
             let it_name = document.createElement("p");
             let it_price = document.createElement("p");
             let it_Quantity = document.createElement("p");
-
 
             ordDet.appendChild(it_name);
             ordDet.appendChild(it_price);
